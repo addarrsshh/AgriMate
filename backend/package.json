@@ -2,10 +2,12 @@
   "name": "agrimate-backend",
   "version": "1.0.0",
   "description": "AgriMate - Smart Agricultural Decision-Support REST API",
-  "main": "src/server.js",
+  "main": "dist/server.js",
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "node --watch src/server.js"
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "start": "node dist/server.js",
+    "dev": "tsx watch src/server.ts"
   },
   "keywords": [
     "agriculture",
@@ -21,5 +23,12 @@
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "mongoose": "^8.3.4"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.25",
+    "@types/node": "^26.6.3",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
   }
 }

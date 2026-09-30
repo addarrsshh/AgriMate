@@ -3,13 +3,36 @@
   "version": "1.0.0",
   "description": "AgriMate - Smart Agricultural Decision-Support Platform",
   "scripts": {
-    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix frontend",
     "dev:backend": "npm run dev --prefix backend",
     "dev:frontend": "npm run dev --prefix frontend",
-    "start:backend": "npm start --prefix backend",
-    "build:frontend": "npm run build --prefix frontend"
+    "build": "npm run build --prefix backend && npm run build --prefix frontend",
+    "build:frontend": "npm run build --prefix frontend",
+    "build:backend": "npm run build --prefix backend",
+    "typecheck": "npm run typecheck --prefix backend",
+    "start:backend": "npm start --prefix backend"
   },
-  "keywords": ["agriculture", "agrimate", "react", "express", "mongodb"],
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.3.4"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.25",
+    "@types/node": "^26.6.3",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "keywords": [
+    "agriculture",
+    "agrimate",
+    "react",
+    "express",
+    "mongodb",
+    "typescript"
+  ],
   "author": "AgriMate Team",
   "license": "ISC"
 }
